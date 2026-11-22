@@ -35,7 +35,7 @@ button:disabled{opacity:.5}
 .ord{display:block;width:100%;text-align:left;margin:6px 0;background:transparent;color:var(--ink);border:1px dashed var(--mut);border-radius:8px}
 </style></head><body><div class="w">
 <h1>Parable Treasure Hunt</h1>
-<p class="sub">Intro Lesson 3 · find the secrets of the Kingdom of Heaven</p>
+<p class="sub">Find the language of heaven</p>
 <div class="map" id="map"><div><b>1</b>Verse</div><div><b>2</b>Sort</div><div><b>3</b>Map</div><div><b>4</b>Quiz</div><div><b>5</b>Secret</div></div>
 <div id="stage"></div>
 <p class="sub" id="score"></p>
@@ -78,7 +78,7 @@ function spinCard(){var T=[['🐑','Animal','a parable that uses an animal (like
    res.querySelector('#tdone').onclick=function(){if(done2)return;done2=true;gems+=2;setMap();this.textContent='🎉 +2 gems! Amen!'}},4100)};
  return c}
 function render(){setMap();stage.innerHTML='';var c=document.createElement('div');c.className='card';
- if(lvl>=L.length){c.innerHTML='<div class="big"><span class="hanko">✓</span></div><h2 style="text-align:center">Treasure unlocked!</h2><p style="text-align:center">You found the secrets of the Kingdom of Heaven. Total: 💎 '+gems+'</p><p style="text-align:center"><b>Therefore, let’s do our best to perceive the true meaning of the parables, since God has chosen us to teach His secrets.</b></p><p style="text-align:center;color:#b5483a"><b>🏠 Homework: Memorize Mt 13:10–11</b></p><div style="text-align:center"><button onclick="lvl=0;gems=0;render()">Play again</button></div>';stage.appendChild(c);stage.appendChild(spinCard());return}
+ if(lvl>=L.length){c.innerHTML='<div class="big"><span class="hanko">✓</span></div><h2 style="text-align:center">Treasure unlocked!</h2><p style="text-align:center">You found the language of heaven. Total: 💎 '+gems+'</p><p style="text-align:center"><b>Therefore, let’s do our best to perceive the true meaning of the parables, since God has chosen us to teach His secrets.</b></p><p style="text-align:center;color:#b5483a"><b>🏠 Homework: Memorize Mt 13:10–11</b></p><div style="text-align:center"><button onclick="lvl=0;gems=0;render()">Play again</button></div>';stage.appendChild(c);stage.appendChild(spinCard());return}
  c.innerHTML=L[lvl]();stage.appendChild(c);var b=document.getElementById('chk');
  if(lvl===0){b.onclick=function(){checkSelects(b,stage.querySelectorAll('input[data-a]').length)};document.getElementById('hint').onclick=function(){document.getElementById('msg').textContent='Word bank: spoke · things · crowd · parables · say · without · parable · Mt 13:34'}}
  if(lvl===4)b.onclick=function(){checkSelects(b,4)};
